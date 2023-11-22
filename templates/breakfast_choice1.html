@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>French Toast</title>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='frenchToast.jpg')}}" alt="French Toast">
+    <p> Our french toast is fantastic! We know you will love it!</p>
+    <a href="/"><button>Home</button></a>
+    <a href="/breakfast/{{ breakfast_choice }}"><button>Back</button></a>
+</body>
+</body>
+</html>

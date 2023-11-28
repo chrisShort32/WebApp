@@ -4,23 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dinner options:</title>
-	body {
-            font-family: Arial, sans-serif;
-            background-image: url('background4.jpg'); /* Update with the actual path */
-            background-size: cover; /* Cover ensures the background covers the entire area */
-            background-repeat: no-repeat; /* The background will not repeat */
-            background-attachment: fixed; /* The background will not scroll with the page */
-            background-position: center center;
-            image-rendering: optimizeQuality; 
-            text-align: center;
-            padding: 20px;
-            margin: 0;
-        }
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('dinner.jpg'); /* Update with the actual path */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+        image-rendering: optimizeQuality; 
+        text-align: center;
+        padding: 20px;
+        margin: 0;
+    }
+    .dinner-options a {
+        display: inline-block;
+        margin: 10px;
+        padding: 15px 30px;
+        background-color: #007bff; /* Button-like background color */
+        color: white; /* Text color */
+        text-decoration: none; /* Removes underline from links */
+        border-radius: 5px; /* Rounded corners */
+        font-size: 1.2em; /* Larger text */
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
+    }
+    .dinner-options a:hover {
+        background-color: #0056b3; /* Darker shade on hover */
+        transform: scale(1.05); /* Slightly enlarges the link on hover */
+    }
+    button {
+        margin: 20px 10px;
+        padding: 10px 20px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    </style>
 </head>
 <body>
     <h1>Here are our Dinner options:</h1>
-    <a href="/dinner/{{ item }}/dinner_choice1"><img src="{{ url_for('static', filename='hotDog.jpg')}}" alt="Hot Dog"></a>
-    <a href="/dinner/{{ item }}/dinner_choice2"><img src="{{ url_for('static', filename='pizza.jpg')}}" alt="Pizza"></a>
+    <div class="dinner-options">
+        <a href="/dinner/{{ item }}/dinner_choice1">Hot Dog</a>
+        <a href="/dinner/{{ item }}/dinner_choice2">Pizza</a>
+    </div>
     <a href="/"><button>Home</button></a>
     <a href="/"><button>Back</button></a>
 </body>

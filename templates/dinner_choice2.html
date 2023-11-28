@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza</title>
-	body {
+    <style>
+        body {
             font-family: Arial, sans-serif;
-            background-image: url('background4.jpg'); /* Update with the actual path */
+            background-image: url('pizza.jpg'); /* Update with the actual path */
             background-size: cover; /* Cover ensures the background covers the entire area */
             background-repeat: no-repeat; /* The background will not repeat */
             background-attachment: fixed; /* The background will not scroll with the page */
@@ -16,9 +17,22 @@
             padding: 20px;
             margin: 0;
         }
+		button {
+        margin: 20px 10px;
+        padding: 10px 20px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    </style>
 </head>
 <body>
-    <img src="{{ url_for('static', filename='pizza.jpg')}}" alt="Pizza">
     <p> Our pizza is super good, much better than pizza from other places.</p>
     <a href="/"><button>Home</button></a>
     <a href="/dinner/{{ dinner_choice }}"><button>Back</button></a>

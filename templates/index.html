@@ -3,12 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Group 2 Resaurant!</title>
+    <title>Welcome to Group 2 Restaurant!</title>
+    <style>
+      body {
+            font-family: Arial, sans-serif;
+            background-image: url('background4.jpg'); /* Update with the actual path */
+            background-size: cover; /* Cover ensures the background covers the entire area */
+            background-repeat: no-repeat; /* The background will not repeat */
+            background-attachment: fixed; /* The background will not scroll with the page */
+            background-position: center center;
+            image-rendering: optimizeQuality; 
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+
+        h1 {
+            color: #333;
+        }
+
+        .menu-item {
+            margin: 20px;
+            border: 2px solid #ddd;
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-item img {
+            width: 300px;
+            height: 200px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .menu-item-text {
+            padding: 15px;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
-    <h1>What will you be having today?:</h1>
-    <a href="/breakfast/breakfast_choice"><img src="{{url_for('static', filename= 'breakfast.jpg' )}}" alt="Breakfast"></a>
-    <a href="/dinner/dinner_choice"><img src="{{url_for('static', filename='dinner.jpg')}}" alt="Dinner"></a>
-
+    <h1 style="color: rgb(198, 163, 144);">  What will you be having today?:</h1>
+    <a class="menu-item" href="/breakfast/item1">
+        <img src="{{url_for('static', filename= 'breakfast.jpg' )}}" alt="Breakfast">
+        <div class="menu-item-text">Breakfast</div>
+    </a>
+    <a class="menu-item" href="/dinner/item2">
+        <img src="{{url_for('static', filename='dinner.jpg')}}" alt="Dinner">
+        <div class="menu-item-text">Dinner</div>
+    </a>
 </body>
 </html>

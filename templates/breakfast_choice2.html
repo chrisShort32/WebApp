@@ -3,11 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>French Toast</title>
+    <title>Omelette</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/static/eggsLarge.jpg'); /* Update with the actual path */
+            background-size: cover; /* Cover ensures the background covers the entire area */
+            background-repeat: no-repeat; /* The background will not repeat */
+            background-attachment: fixed; /* The background will not scroll with the page */
+            padding: 20px;
+            margin: 0;
+        }
+		button {
+        margin: 20px 10px;
+        padding: 10px 20px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    </style>
 </head>
 <body>
-    <img src="{{ url_for('static', filename='eggs.jpg')}}" alt="Omelette">
-    <p> This might be the best Omelette in the world, but due to legal reasons, were not allowed to say that.</p>
+    <p style="color: rgb(255, 255, 255);"> This might be the best Omelette in the world, but due to legal reasons,<br>we're not allowed to say that.</p>
     <a href="/"><button>Home</button></a>
     <a href="/breakfast/{{ breakfast_choice }}"><button>Back</button></a>
 </body>
